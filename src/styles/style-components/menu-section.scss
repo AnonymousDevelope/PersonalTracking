@@ -1,0 +1,28 @@
+section {
+  .menu-item {
+    cursor: pointer;
+
+    a {
+      @apply flex items-center gap-3 px-3 py-2 text-center;
+
+      // Responsive width adjustments for different breakpoints
+      @apply xl:w-full lg:w-fit;
+      span {
+        // Hidden on xsall screens, visible on `xs` and above
+        @apply ml-2 hidden sm:inline;
+      }
+      // Font size for different breakpoints
+      @apply xl:text-[25px] sm:text-[18px] md:text-[22px] text-[35px];
+
+      &.active {
+        @apply text-slate-400 relative flex items-center;
+
+        &::before {
+          content: "";
+          @apply absolute w-1 h-full bg-slate-400 rounded-r-md;
+          left: 0;
+        }
+      }
+    }
+  }
+}
