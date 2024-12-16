@@ -29,7 +29,6 @@ const Index = () => {
 
   const addTransaction = (e) => {
     e.preventDefault();
-
     if (!transactionName || !transactionAmount || !transactionDate) {
       return; // Ensure all fields are filled
     }
@@ -66,27 +65,6 @@ const Index = () => {
         {/* Left section for adding income */}
         <div className="flex flex-col w-1/2">
           <span className="text-sm italic text-slate-500">You can add your income here</span>
-          {/* Set Income Form */}
-          <form onSubmit={addTransaction}>
-            <div className="flex flex-col mt-4 gap-3 pb-9 border-b-2 border-slate-600">
-              <label htmlFor="income" className="text-sm">
-                Enter your income/budget
-                <span className="text-red-500 text-lg align-middle"> *</span>
-              </label>
-              <Input
-                required
-                id="income"
-                type="number"
-                className="w-full italic placeholder:italic"
-                placeholder="Ex: 100"
-                value={income}
-                onChange={(e) => setIncome(e.target.value)}
-              />
-              <button className="btn bg-slate-700 text-white w-fit px-4 py-3 rounded-md">
-                Set Income
-              </button>
-            </div>
-          </form>
 
           {/* Add Transaction Form */}
           <form onSubmit={addTransaction}>
