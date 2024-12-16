@@ -5,7 +5,7 @@ import { MdOutlineCurrencyExchange } from "react-icons/md"
 import { NavLink } from "react-router-dom"
 const index = () => {
   return (
-    <section className="menu flex flex-col flex-1 w-1/4 h-[90vh] bg-primary-dark-custom px-2 py-3 rounded-md">
+    <section className="menu flex flex-col flex-1 w-1/4 h-auto bg-primary-dark-custom px-2 py-3 rounded-md">
       <div className="logo w-full flex items-center flex-row gap-3">
         <div className="img flex items-center justify-center p-4 bg-dark-custom rounded-full ">
           <ImUser className="w-6 h-6 text-slate-500" />
@@ -59,7 +59,6 @@ const index = () => {
             </NavLink>
           </li>
         </ul>
-
       </div>
     </section>
   )

@@ -1,7 +1,13 @@
-const index = ({children,className, ...props}) => {
+const index = ({ children, className,classNameParent, title, ...props }) => {
   return (
-    <div className={"block px-4 py-3 bg-primary-dark-custom w-fit shadow-lg rounded-md "+className} {...props}>
+    <div className={"block px-4 py-3 bg-primary-dark-custom shadow-lg rounded-md "+classNameParent} {...props}>
+      {title && <div className="title text-start italic font-bold">
+        {title}
+      </div>
+      }
+      <div className={className}>
         {children}
+      </div>
     </div>
   )
 }

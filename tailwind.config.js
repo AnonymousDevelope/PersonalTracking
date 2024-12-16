@@ -10,6 +10,8 @@ export default {
         "dark-custom":"var(--dark-custom)",
         "light-custom":"var(--light-custom)",
         "primary-dark-custom":"var(--primary-dark-custom)",
+        "expense":"#FEF2F2",
+        "income":"#CEE8DC",
       },
       screens: {
         'xs': '480px',
