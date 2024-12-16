@@ -3,8 +3,15 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import {MenuSection} from "@/components";
 import { Exchange, ExpenseMoney, IncomeMoney, ViewTransaction } from './pages';
+import { useContext, useEffect } from 'react';
+import { TransactionContext } from './context/TransactionConetxt';
+import { getLocalStorage, setLocalStorage } from './utils/actions';
 
 function App() {
+  const {setTransaction} = useContext(TransactionContext);
+  useEffect(() => {
+      setTransaction(getLocalStorage("transactions"));
+  },[setLocalStorage])
   return (
     <>
       <div className="w-full flex flex-row gap-3">
